@@ -32,6 +32,8 @@ var LANG = {
     $js->set("owlcarousel2/owl.carousel.js");
     $js->set("magiczoomplus/magiczoomplus.js");
     $js->set("slick/slick.js");
+    $js->set("js/jquery.lettering.js");
+    $js->set("js/jquery.textillate.js");
     $js->set("fancybox3/jquery.fancybox.js");
     $js->set("photobox/photobox.js");
     $js->set("simplenotify/simple-notify.js");

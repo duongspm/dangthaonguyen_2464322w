@@ -326,6 +326,34 @@ NN_FRAMEWORK.Videos = function () {
     });
   }
 };
+
+/*  */
+NN_FRAMEWORK.InfoSlide = function () {
+  $('.name_sl').textillate({
+    in:{
+        effect: 'bounceIn'
+    },
+    out: {
+        effect: 'bounceOut'
+    },
+    loop: true
+  });
+  $('.slogan_s1').textillate({
+      in:{
+          effect: 'fadeInLeft'
+      },
+      out: {
+          effect: 'fadeInRight'
+      },
+      loop: true
+  });
+
+$('.menu ul li').hover(function(){ 
+    if($(this).children('ul').find('li').length){  
+        $(this).children('ul').stop().slideToggle(500);  
+    } 
+});
+};
 /* Slick */
 NN_FRAMEWORK.SlickBlog = function () {
   $(".blog-right").slick({
@@ -873,6 +901,7 @@ $(document).ready(function () {
   NN_FRAMEWORK.Lazys();
   NN_FRAMEWORK.Tools();
   NN_FRAMEWORK.Popup();
+  // NN_FRAMEWORK.InfoSlide();
   NN_FRAMEWORK.SlickSanpham();
   NN_FRAMEWORK.SlickBlog();
   NN_FRAMEWORK.SlickTieuchi();

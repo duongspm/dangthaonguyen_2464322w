@@ -280,10 +280,23 @@
                 <?php }?>
             </div>
         </div>
+        <?php if(count($thuvienanh) > 6){?>
+        <div class="album__xemthem">
+            <a href="thu-vien-anh" class="text-decoration-none button button--greip"><span><span>Xem
+                        Thêm</span></span></a>
+        </div>
+        <?php }?>
+
     </div>
 </div>
 
 <div class="blog bg">
+    <div class="img-item-02">
+        <img src="assets/images/images/img-item-03.png" alt="">
+    </div>
+    <div class="img-item-04">
+        <img src="assets/images/images/img-item-04.png" alt="">
+    </div>
     <div class="wrapper">
         <div class="blogg pd">
             <div class="heading__top">
@@ -302,24 +315,41 @@
             </div>
             <?php if(!empty($newsnb)){?>
             <div class="blog__list">
-                <div class="owl-page owl-carousel owl-theme" data-xsm-items="3:80" data-sm-items="3:80"
-                    data-md-items="3:80" data-lg-items="3:80" data-xlg-items="3:80" data-rewind="1" data-autoplay="1"
+                <div class="owl-page owl-carousel owl-theme" data-xsm-items="1:80" data-sm-items="1:80"
+                    data-md-items="1:80" data-lg-items="1:80" data-xlg-items="1:80" data-rewind="1" data-autoplay="1"
                     data-loop="1" data-lazyload="0" data-mousedrag="1" data-touchdrag="1" data-smartspeed="500"
-                    data-autoplayspeed="3500" data-dots="1" data-nav="0"
+                    data-autoplayspeed="3500" data-dots="0" data-nav="0"
                     data-navtext="<svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-narrow-left' width='50' height='37' viewBox='0 0 24 24' stroke-width='1' stroke='#ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><line x1='5' y1='12' x2='19' y2='12' /><line x1='5' y1='12' x2='9' y2='16' /><line x1='5' y1='12' x2='9' y2='8' /></svg>|<svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-narrow-right' width='50' height='37' viewBox='0 0 24 24' stroke-width='1' stroke='#ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><line x1='5' y1='12' x2='19' y2='12' /><line x1='15' y1='16' x2='19' y2='12' /><line x1='15' y1='8' x2='19' y2='12' /></svg>"
                     data-navcontainer=".control-bestseller">
-                    <?php foreach($probest as $k => $v) { ?>
+                    <?php foreach($newsnb as $k => $v) { ?>
                     <div class="blog__item">
-                        <div class="blog__img">
-                            <?= $func->getImage(['class' => 'w-100', 'sizes' => '315x322x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]]) ?>
-
+                        <div class="blog__img hover_xam scale-img">
+                            <?= $func->getImage(['class' => 'w-100', 'sizes' => '450x610x1', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]]) ?>
                         </div>
                         <div class="blog__content">
+                            <div class="blog__date">
+                                <div class="blog__date--icon">
+                                    <img src="assets/images/images/calendar.png" alt="">
+                                </div>
+                                <span class="blog__day">
+                                    <?=date("d ",$v['date_created'])?> tháng
+                                    <?=date("m, Y",$v['date_created'])?>
+                                </span>
+                            </div>
 
-                            <span class="bestseller__name"><?=$v['name'.$lang]?></span>
+                            <div class="blog__name">
+                                <span>
+                                    <?=$v['name'.$lang]?>
+                                </span>
+                            </div>
+                            <div class="blog__desc">
+                                <span>
+                                    <?=$v['desc'.$lang]?>
+                                </span>
+                            </div>
                             <a href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>"
                                 class="text-decoration-none blog__xemthem">
-
+                                Xem thêm
                             </a>
                         </div>
                     </div>
@@ -331,51 +361,6 @@
                 <strong><?= khongtimthayketqua ?></strong>
             </div>
             <?php } ?>
-        </div>
-    </div>
-</div>
-<div class="infor">
-    <div class="wrapper">
-        <div class="inforr">
-            <div class="infor__item">
-                <div class="infor__img">
-                    <img src="assets/images/images/icon-phone2.png" alt="<?=$setting['name'.$lang]?>">
-                </div>
-                <div class="infor__content">
-                    <a class="infor--title" href="tel:<?=$optsetting['hotline']?>">
-                        <?=$func->formatPhone($optsetting['hotline'])?></a>
-                    <?php if(!empty($openingtime)){?>
-                    <span class="infor--desc">
-                        <?=$openingtime['desc'.$lang]?>
-                    </span>
-                    <?php } ?>
-                </div>
-            </div>
-            <div class="infor__item">
-                <div class="infor__img">
-                    <img src="assets/images/images/email02.png" alt="<?=$setting['name'.$lang]?>">
-                </div>
-                <div class="infor__content">
-                    <span class="infor--title">
-                        <?=$optsetting['email']?>
-                    </span>
-                    <span class="infor--desc">
-                        Gửi thư cho chúng tội bất cứ lúc nào
-                    </span>
-                </div>
-            </div>
-            <div class="infor__item">
-                <div class="infor__img">
-                    <img src="assets/images/images/icon-phone2.png" alt="<?=$setting['name'.$lang]?>">
-                </div>
-                <div class="infor__content">
-                    <span class="infor--title">
-                        <?=$optsetting['address']?>
-                    </span>
-                    <span class="infor--desc">Địa chỉ liên hệ</span>
-
-                </div>
-            </div>
         </div>
     </div>
 </div>

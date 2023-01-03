@@ -11,7 +11,7 @@
     
     $videonb = $cache->get("select link_video, photo,name$lang, id from #_photo where type = ? and find_in_set('hienthi',status)", array('videoclip'), 'result', 7200);
 
-    $thuvienanh = $cache->get("select id, type, name$lang,slugen ,desc$lang,slugvi ,photo, date_created, date_updated, options from #_product where type = ?  and find_in_set('hienthi',status) order by numb,id desc",array('thu-vien-anh'), 'result', 7200);
+    $thuvienanh = $cache->get("select id, type, name$lang,slugen ,desc$lang,slugvi ,photo, date_created, date_updated, options from #_product where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc",array('thu-vien-anh'), 'result', 7200);
 
     $prolist = $cache->get("select name$lang, photo, slugvi, slugen, id from #_product_list where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('san-pham'), 'result', 7200);
 

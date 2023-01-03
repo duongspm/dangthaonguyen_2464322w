@@ -175,7 +175,7 @@
 			break;
 			
 		case 'video':
-			$source = "videoclip";
+			$source = "video";
 			$template = "video/video";
 			$type = $com;
 			$seo->set('type','object');

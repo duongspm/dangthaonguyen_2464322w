@@ -15,6 +15,8 @@
     
     $videonb = $cache->get("select link_video,photo,name$lang, id from #_photo where type = ? and find_in_set('hienthi',status)", array('videoclip'), 'result', 7200);
     
+    $footer = $cache->get("select name$lang,desc$lang, content$lang from #_static where type = ? limit 0,1", array('footer'), 'fetch', 7200);
+
     //Need
     
     /* Get statistic */
