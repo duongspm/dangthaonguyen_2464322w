@@ -102,19 +102,6 @@
 		/* Sản phẩm */
 		array("tbl" => "product", "field" => "id", "source" => "product", "com" => "san-pham", "type" => "san-pham", "menu" => true),
 		array("tbl" => "product_list", "field" => "idl", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
-		array("tbl" => "product_cat", "field" => "idc", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
-		array("tbl" => "product_item", "field" => "idi", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
-		
-		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "ve-chung-toi", "type" => "ve-chung-toi", "menu" => true),
-
-		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "du-an", "type" => "du-an", "menu" => true),
-		array("tbl" => "news_list", "field" => "idl", "source" => "news", "com" => "du-an", "type" => "du-an"),
-		
-		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "dich-vu", "type" => "dich-vu", "menu" => true),
-
-		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "bao-gia", "type" => "bao-gia", "menu" => true),
-
-		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "tu-van", "type" => "tu-van", "menu" => true),
 
 		/* Tin tức */
 		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "tin-tuc", "type" => "tin-tuc", "menu" => true),
@@ -126,6 +113,12 @@
 		array("tbl" => "", "field" => "id", "source" => "", "com" => "lien-he", "type" => "", "menu" => true),
 
 		array("tbl" => "news", "field" => "id", "source" => "news", "com" => "chinh-sach", "type" => "chinh-sach", "menu" => false),
+
+		/* Video */
+		array("tbl" => "photo", "field" => "id", "source" => "video", "com" => "videoclip", "type" => "videoclip", "menu" => true),
+
+		/* Thư viện ảnh */
+		array("tbl" => "product", "field" => "id", "source" => "product", "com" => "thu-vien-anh", "type" => "thu-vien-anh", "menu" => true),
 
 	);
 
@@ -172,13 +165,6 @@
 			$titleMain = gioithieu;
 			break;
 			
-		case 've-chung-toi':
-			$source = "news";
-			$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
-			$seo->set('type',isset($_GET['id']) ? "article" : "object");
-			$type = $com;
-			$titleMain = "Về chúng tôi";
-			break;
 			
 		case 'tin-tuc':
 			$source = "news";
@@ -188,28 +174,20 @@
 			$titleMain = tintuc;
 			break;
 			
-		case 'du-an':
-			$source = "news";
-			$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
-			$seo->set('type',isset($_GET['id']) ? "article" : "object");
+		case 'video':
+			$source = "videoclip";
+			$template = "video/video";
 			$type = $com;
-			$titleMain = "Dự án";
+			$seo->set('type','object');
+			$titleMain = "Video";
 			break;
-			
-		case 'dich-vu':
-			$source = "news";
-			$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
+
+		case 'thu-vien-anh':
+			$source = "product";
+			$template = isset($_GET['id']) ? "album/album_detail" : "album/album";
 			$seo->set('type',isset($_GET['id']) ? "article" : "object");
 			$type = $com;
-			$titleMain = "Dịch vụ";
-			break;
-			
-		case 'bao-gia':
-			$source = "news";
-			$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
-			$seo->set('type',isset($_GET['id']) ? "article" : "object");
-			$type = $com;
-			$titleMain = "Báo giá";
+			$titleMain = thuvienanh;
 			break;
 			
 		case 'chinh-sach':

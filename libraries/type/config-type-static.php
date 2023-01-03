@@ -16,20 +16,24 @@
     $config['static'][$nametype]['content'] = true;
     $config['static'][$nametype]['content_cke'] = true;
     $config['static'][$nametype]['seo'] = true;
-    $config['static'][$nametype]['width'] = 550;
-    $config['static'][$nametype]['height'] = 330;
+    $config['static'][$nametype]['width'] = 500;
+    $config['static'][$nametype]['height'] = 460;
     $config['static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
 
-    /* Slogan */
-    $nametype = "slogan";
-    $config['static'][$nametype]['title_main'] = "Slogan";
+    /* footer */
+    $nametype = "footer";
+    $config['static'][$nametype]['title_main'] = "Footer";
     $config['static'][$nametype]['check'] = array("hienthi" => "Hiển thị");
     $config['static'][$nametype]['desc'] = true;
+    $config['static'][$nametype]['desc_cke'] = true;
 
-
-    /* Giờ mở cửa */
-    $nametype = "opening-time";
-    $config['static'][$nametype]['title_main'] = "Giờ mở cửa";
+    /* Mô tả slide */
+    $nametype = "desc-slide-show";
+    $config['static'][$nametype]['title_main'] = "Mô tả slide";
     $config['static'][$nametype]['check'] = array("hienthi" => "Hiển thị");
     $config['static'][$nametype]['desc'] = true;
+    $config['static'][$nametype]['name'] = true;
+    $config['static'][$nametype]['content'] = true;
+
+
 ?>

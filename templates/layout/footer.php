@@ -120,7 +120,7 @@
 </div>
 <div class="footer-copyright">
     <span>
-        <span class="copyright__name">
+        <span class="copyright__name animate__ animate__fadeInLeft wow animated">
             <?=$setting['name'.$lang]?>
         </span> All Rights Reserved. Designed by Nina Co.,Ltd
     </span>

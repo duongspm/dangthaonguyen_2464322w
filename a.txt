@@ -1,0 +1,16 @@
+news
+	feedback
+	blog
+newsletter
+	
+photo
+	logo
+	slide ?
+	video avt
+product
+	san pham 1 cap, list img, banchay
+	thivuenanh
+static
+	gioi thieu
+	footer
+	

@@ -18,12 +18,12 @@
 		'arrayDomainSSL' => array(),
 		'database' => array(
 			'server-name' => $_SERVER["SERVER_NAME"],
-			'url' => '/2022/source_company/12/nhaviet_2106922w/', // Thay
+			'url' => '/2023/01/dangthaonguyen_2464322w/', // Thay
 			'type' => 'mysql',
 			'host' => 'localhost',
 			'username' => 'root',
 			'password' => '',
-			'dbname' => '2022-12_nhaviet_2106922w',//Thay
+			'dbname' => '2023-01_2464322w',//Thay
 			'port' => 3306,
 			'prefix' => 'table_',
 			'charset' => 'utf8mb4'
@@ -68,7 +68,6 @@
 				"san-pham" => array("vi"=>"san-pham","en"=>"product"),
 				"tin-tuc" => array("vi"=>"tin-tuc","en"=>"news"),
 				"thu-vien-anh" => array("vi"=>"thu-vien-anh","en"=>"gallery"),
-				"video" => array("vi"=>"video","en"=>"video"),
 				"lien-he" => array("vi"=>"lien-he","en"=>"contact")
 			)
 		),
